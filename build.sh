@@ -1,5 +1,17 @@
 #!/bin/bash
 ROOTPATH=`pwd`
+if [ -d $ROOTPATH/LiThermal ]; then
+    echo "Updating..."
+    git submodule update --init --recursive
+    cd LiThermal
+    git checkout master
+    git pull origin master
+    cd ..
+else
+    echo "Folder not exist, cloning..."
+    git clone https://github.com/diylxy/LiThermal.git
+fi
+
 export STAGING_DIR=$ROOTPATH/target
 mkdir build
 cd build
@@ -15,4 +27,4 @@ if [ ! -d $ROOTPATH/UDISK ]; then
 fi
 cp $ROOTPATH/build/LiThermal $ROOTPATH/UDISK
 cp $ROOTPATH/build/BSOD $ROOTPATH/UDISK
-cp $ROOTPATH/thermalcamera.sh $ROOTPATH/UDISK
+cp $ROOTPATH/thermalcamera.sh $ROOTPATH/UDIS
