@@ -27,4 +27,4 @@ if [ ! -d $ROOTPATH/UDISK ]; then
 fi
 cp $ROOTPATH/build/LiThermal $ROOTPATH/UDISK
 cp $ROOTPATH/build/BSOD $ROOTPATH/UDISK
-cp $ROOTPATH/thermalcamera.sh $ROOTPATH/UDIS
+cp $ROOTPATH/thermalcamera.sh $ROOTPATH/UDISK
