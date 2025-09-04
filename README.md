@@ -1,6 +1,11 @@
 # LiThermal 热成像相机编译工具链
 用于LiThermal 热成像相机的编译工具链和编译所需的staging_dir文件。  
-如果有报错，建议使用Ubuntu 22.04 LTS或以下版本编译。  
+如果有报错，建议使用Ubuntu 22.04 LTS或以下版本编译。
+如果你修改了LiThermal子模块，你需要先更新子模块。进入子模块目录，拉取最新的更改：
+
+```bash
+git submodule update --remote --merge
+```
 ## 最新版下载
 [![Make project](https://github.com/diylxy/LiThermal_Compiler/actions/workflows/makeProject.yml/badge.svg)](https://github.com/diylxy/LiThermal_Compiler/actions/workflows/makeProject.yml)  
 最新构建结果点上面那个Make Project，打开后打开最新（最上面）那个，在底下`Artifacts`里有个`UDISK.tar`，下载后得到`UDISK.tar.zip`，解压缩2次，直到得到1个文件夹UDISK，里面包含3个文件，把这3个文件复制到相机的MTP设备中（经测试，不需要killall等其它操作），之后长按电源键重启相机。  
