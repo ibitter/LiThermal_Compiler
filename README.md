@@ -4,7 +4,7 @@
 如果你修改了LiThermal子模块，你需要先更新子模块。进入子模块目录，拉取最新的更改：
 
 ```bash
-git submodule update --remote --merge
+git submodule update --remote
 ```
 ## 最新版下载
 [![Make project](https://github.com/diylxy/LiThermal_Compiler/actions/workflows/makeProject.yml/badge.svg)](https://github.com/diylxy/LiThermal_Compiler/actions/workflows/makeProject.yml)  
